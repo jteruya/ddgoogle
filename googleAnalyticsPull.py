@@ -141,7 +141,7 @@ def main():
   i = 0
  
   # Open parameter file and process each line (except the header line).
-  with open('googleAnalyticsQueries.parameters', 'rb') as f:
+  with open(currentpath + 'googleAnalyticsQueries.parameters', 'rb') as f:
      for line in f:
         # Don't read in header record. 
         if i > 0:
