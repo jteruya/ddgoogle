@@ -1,0 +1,3 @@
+schemaname|dbtablename|ids|metrics|dimensions|sort|filters|max_results|filename
+google|cms_pageview_counts|96943584|ga:pageviews|ga:pagePath, ga:deviceCategory, ga:dimension4, ga:previousPagePath, ga:date, ga:hour|ga:date, ga:hour, ga:pageviews|ga:pageviews>=0|10000|cms_pageview_counts_load.csv
+google|session_notes_pageview_counts|97407136|ga:pageviews|ga:pagePath, ga:date, ga:hour, ga:minute|-ga:pageviews|ga:pageviews>=0|10000|session_notes_pageview_counts_load.csv
