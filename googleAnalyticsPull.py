@@ -130,8 +130,13 @@ def print_results(results, filepath, filename):
 def main():
 
   # Initial Variables
-  currentpath = os.getcwd() + '/google/' 
-  csvpath = currentpath + 'csv/' 
+  home = os.path.expanduser('~')
+  app = 'google'
+  #currentpath = '/home/jteruya/google/'
+  #currentpath = os.getcwd() + '/google/'
+  currentpath = home + '/' + app
+  csvpath = currentpath + 'csv/'
+  authpath = currentpath + 'auth/'  
   currentdate = time.strftime("%Y-%m-%d")
   pg_connect = 'psql -h 10.223.192.6 -p 5432 -A -t analytics etl'  
  
@@ -140,8 +145,10 @@ def main():
 
   # Use the developer console and replace the values with your
   # service account email and relative location of your key file.
-  service_account_email = '230482720110-lht3ditrnuhjr7sh3eesm40bv0r6u1l4@developer.gserviceaccount.com'
-  key_file_location = '/home/jteruya/google/auth/client_secrets.key.pem'
+  #service_account_email = '230482720110-lht3ditrnuhjr7sh3eesm40bv0r6u1l4@developer.gserviceaccount.com'
+  service_account_email = 'dd-google-analytics-service-ac@dd-data-platform-1307.iam.gserviceaccount.com'
+  #key_file_location = '/home/jteruya/google/auth/client_secrets.key.pem'
+  key_file_location = authpath + 'DD_Data_Platform-9fcc8aa05865.pem'
 
   # Authenticate and construct service.
   service = get_service('analytics', 'v3', scope, key_file_location,
