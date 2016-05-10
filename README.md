@@ -33,3 +33,9 @@ DD Batman (10.223.176.157) Development Environment:
 4.) Create a .pem Key File 
        - openssl pkcs12 -in client_secrets.p12 -out client_secrets.key.pem -nocerts -nodes (asks for password from above) 
 
+
+NOTE: As of 5/10/2016, the code to pull from GA is now using the datadawg's generic email account: dd.product.analytics@gmail.com
+
+The following information is associated with this gmail account and should be used as opposed to the info in the instructions above:
+Service Email: dd-google-analytics-service-ac@dd-data-platform-1307.iam.gserviceaccount.com
+Auth Files: DD_Data_Platform* 
