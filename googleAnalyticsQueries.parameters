@@ -1,5 +1,14 @@
 schemaname|dbtablename|ids|metrics|dimensions|sort|filters|max_results|filename
 google|ep_user_device_counts|96943584|ga:pageviews, ga:totalEvents|ga:dimension4, ga:deviceCategory, ga:date, ga:hour|ga:date, ga:hour|ga:pageviews>=0|10000|ep_user_device_counts_load.csv
 google|ep_pageview_counts|96943584|ga:pageviews|ga:dimension4, ga:pagePath, ga:date, ga:hour|ga:date, ga:hour|ga:pageviews>=0|10000|ep_pageview_counts_load.csv
+google|ep_pageview_survey|96943584|ga:pageviews|ga:dimension4, ga:pagePath, ga:dimension2, ga:date, ga:hour|ga:date, ga:hour|ga:pagePath==/analytics/survey/<surveyId>/items|10000|ep_pageview_survey_counts_load.csv
+google|ep_pageview_survey_item|96943584|ga:pageviews|ga:dimension4, ga:pagePath, ga:dimension2, ga:dimension3, ga:date, ga:hour|ga:date, ga:hour|ga:pagePath==/analytics/survey/<surveyId>/<itemId>|10000|ep_pageview_survey_item_load.csv
 google|ep_event_counts|96943584|ga:totalEvents|ga:dimension4, ga:eventCategory, ga:eventLabel, ga:eventAction, ga:date, ga:hour, ga:minute|ga:date, ga:hour, ga:minute|ga:totalEvents>=0|10000|ep_event_counts_load.csv
+google|ep_event_nolabel_counts|96943584|ga:totalEvents|ga:dimension4, ga:eventCategory, ga:eventAction, ga:date, ga:hour, ga:minute|ga:date, ga:hour, ga:minute|ga:eventCategory==timeframeselector|10000|ep_event_nolabel_counts_load.csv
 google|session_notes_pageview_counts|97407136|ga:pageviews|ga:pagePath, ga:date, ga:hour, ga:minute|ga:date, ga:hour, ga:minute|ga:pageviews>=0|10000|session_notes_pageview_counts_load.csv
+google|ep_app_pageview_counts|96943584|ga:pageviews|ga:dimension1, ga:dimension4, ga:pagePath, ga:date, ga:hour|ga:date, ga:hour|ga:pageviews>=0|10000|ep_app_pageview_counts_load.csv
+google|ep_app_event_counts|96943584|ga:totalEvents|ga:dimension1, ga:dimension4, ga:eventCategory, ga:eventLabel, ga:eventAction, ga:date, ga:hour|ga:date, ga:hour|ga:totalEvents>=0|10000|ep_app_event_counts_load.csv
+google|ep_app_pageview_survey|96943584|ga:pageviews|ga:dimension1, ga:dimension4, ga:pagePath, ga:dimension2, ga:date, ga:hour|ga:date, ga:hour|ga:pagePath==/analytics/survey/<surveyId>/items|10000|ep_app_pageview_survey_counts_load.csv
+google|ep_app_pageview_survey_item|96943584|ga:pageviews|ga:dimension1, ga:dimension4, ga:pagePath, ga:dimension2, ga:dimension3, ga:date, ga:hour|ga:date, ga:hour|ga:pagePath==/analytics/survey/<surveyId>/<itemId>|10000|ep_app_pageview_survey_item_load.csv
+google|ep_app_event_nolabel_counts|96943584|ga:totalEvents|ga:dimension1, ga:dimension4, ga:eventCategory, ga:eventAction, ga:date, ga:hour|ga:date, ga:hour|ga:eventCategory==timeframeselector|10000|ep_app_event_nolabel_counts_load.csv
+google|ep_app_purple_event_counts|96953154|ga:totalEvents|ga:dimension1, ga:dimension4, ga:eventCategory, ga:eventLabel, ga:date, ga:hour, ga:minute|ga:date, ga:hour, ga:minute|ga:totalEvents>=0|10000|ep_app_purple_event_counts_load.csv

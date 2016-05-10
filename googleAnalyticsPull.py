@@ -14,6 +14,7 @@ from oauth2client import client
 from oauth2client import file
 from oauth2client import tools
 
+import os
 from sys import argv
 import csv
 
@@ -107,7 +108,16 @@ def print_results(results, filepath, filename):
   # Write data table.
   if results.get('rows', []):
     for row in results.get('rows'):
-      writer.writerow(row)
+      try:
+         writer.writerow(row)
+      except UnicodeError:
+         print(row)
+         #row[0] = unicode(row[0], "utf-8")
+      else:
+         # value was valid ASCII data
+         pass  
+
+      #writer.writerow(row)
       print(''.join('%30s' %r for r in row))
     
   else:
@@ -120,7 +130,7 @@ def print_results(results, filepath, filename):
 def main():
 
   # Initial Variables
-  currentpath = '/home/jteruya/google/'
+  currentpath = os.getcwd() + '/google/' 
   csvpath = currentpath + 'csv/' 
   currentdate = time.strftime("%Y-%m-%d")
   pg_connect = 'psql -h 10.223.192.6 -p 5432 -A -t analytics etl'  
