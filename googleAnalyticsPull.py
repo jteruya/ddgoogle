@@ -131,7 +131,7 @@ def main():
 
   # Initial Variables
   home = os.path.expanduser('~')
-  app = 'google'
+  app = 'google/'
   #currentpath = '/home/jteruya/google/'
   #currentpath = os.getcwd() + '/google/'
   currentpath = home + '/' + app
