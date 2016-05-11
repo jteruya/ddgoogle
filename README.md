@@ -39,3 +39,19 @@ NOTE: As of 5/10/2016, the code to pull from GA is now using the datadawg's gene
 The following information is associated with this gmail account and should be used as opposed to the info in the instructions above:
 Service Email: dd-google-analytics-service-ac@dd-data-platform-1307.iam.gserviceaccount.com
 Auth Files: DD_Data_Platform* 
+
+Additionally, because there were changes to the corresponding python modules the following version need to be set in the environment that this script is run:
+
+oauth2client: 1.5.1
+google-api-python-client: 1.4.2
+pycrypto: 2.6.1
+
+To install these specific versions use the following commands:
+sudo pip install oauth2client==1.5.1
+sudo pip install google-api-python-client==1.4.2
+sudo pip install pycrypto==2.6.1
+
+You can check these versions with the following commands:
+pip show oauth2client | grep Version
+pip show google-api-python-client | grep Version
+pip show pycrypto | grep Version
