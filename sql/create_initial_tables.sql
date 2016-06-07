@@ -117,3 +117,14 @@ create table google.ep_app_pageview_survey_item (
    , date date
    , hour_of_day int
    , total_pageviews int);
+
+drop table if exists ep_app_pageview_browser_count
+create table google.ep_app_pageview_browser_count (
+   application_id varchar
+   , global_user_id varchar
+   , page_path varchar
+   , date date
+   , hour_of_day int
+   , minute int
+   , browser char
+   , total_pageviews int );
