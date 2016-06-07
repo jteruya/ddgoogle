@@ -120,7 +120,7 @@ create table google.ep_app_pageview_survey_item (
 
 drop table if exists ep_app_pageview_browser_count
 create table google.ep_app_pageview_browser_count (
-   , application_id varchar
+   application_id varchar
    , global_user_id varchar
    , page_path varchar
    , date date
